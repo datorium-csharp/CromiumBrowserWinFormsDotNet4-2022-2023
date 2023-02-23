@@ -81,5 +81,10 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
                 
             }            
         }
+
+        private void Address_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
