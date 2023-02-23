@@ -81,5 +81,11 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
                 
             }            
         }
+
+        private void ElchinsMethod()
+        {
+            //some actions here
+        }
+
     }
 }
