@@ -81,5 +81,10 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
                 
             }            
         }
+
+        private void Egons()
+        {
+            this.Close();
+        }
     }
 }

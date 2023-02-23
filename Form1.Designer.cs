@@ -34,12 +34,12 @@
             this.Address = new System.Windows.Forms.ToolStripTextBox();
             this.addBrowserTab = new System.Windows.Forms.ToolStripButton();
             this.removeBrowserTab = new System.Windows.Forms.ToolStripButton();
-            this.BrowserTabs = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.BrowserTabs = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.toolStrip1.SuspendLayout();
             this.BrowserTabs.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,8 @@
             this.toolStripProgressBar1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1191, 50);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1786, 74);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -67,7 +68,7 @@
             this.Go.Image = ((System.Drawing.Image)(resources.GetObject("Go.Image")));
             this.Go.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Go.Name = "Go";
-            this.Go.Size = new System.Drawing.Size(28, 47);
+            this.Go.Size = new System.Drawing.Size(34, 69);
             this.Go.Text = "toolStripButton1";
             this.Go.Click += new System.EventHandler(this.Go_Click);
             // 
@@ -75,7 +76,8 @@
             // 
             this.Address.Font = new System.Drawing.Font("Segoe UI", 24F);
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(119, 50);
+            this.Address.Size = new System.Drawing.Size(176, 74);
+            //this.Address.Click += new System.EventHandler(this.Address_Click);
             // 
             // addBrowserTab
             // 
@@ -84,7 +86,7 @@
             this.addBrowserTab.Image = ((System.Drawing.Image)(resources.GetObject("addBrowserTab.Image")));
             this.addBrowserTab.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addBrowserTab.Name = "addBrowserTab";
-            this.addBrowserTab.Size = new System.Drawing.Size(29, 47);
+            this.addBrowserTab.Size = new System.Drawing.Size(40, 69);
             this.addBrowserTab.Text = "+";
             this.addBrowserTab.Click += new System.EventHandler(this.addBrowserTab_Click);
             // 
@@ -95,40 +97,9 @@
             this.removeBrowserTab.Image = ((System.Drawing.Image)(resources.GetObject("removeBrowserTab.Image")));
             this.removeBrowserTab.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.removeBrowserTab.Name = "removeBrowserTab";
-            this.removeBrowserTab.Size = new System.Drawing.Size(24, 47);
+            this.removeBrowserTab.Size = new System.Drawing.Size(34, 69);
             this.removeBrowserTab.Text = "-";
             this.removeBrowserTab.Click += new System.EventHandler(this.removeBrowserTab_Click);
-            // 
-            // BrowserTabs
-            // 
-            this.BrowserTabs.Controls.Add(this.tabPage1);
-            this.BrowserTabs.Controls.Add(this.tabPage2);
-            this.BrowserTabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BrowserTabs.Location = new System.Drawing.Point(0, 50);
-            this.BrowserTabs.Name = "BrowserTabs";
-            this.BrowserTabs.SelectedIndex = 0;
-            this.BrowserTabs.Size = new System.Drawing.Size(1191, 543);
-            this.BrowserTabs.TabIndex = 3;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1183, 517);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1183, 517);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // toolStripButton1
             // 
@@ -136,7 +107,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(28, 47);
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 69);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // toolStripButton2
@@ -145,22 +116,57 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(28, 47);
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 69);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 47);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(150, 69);
+            // 
+            // BrowserTabs
+            // 
+            this.BrowserTabs.Controls.Add(this.tabPage1);
+            this.BrowserTabs.Controls.Add(this.tabPage2);
+            this.BrowserTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BrowserTabs.Location = new System.Drawing.Point(0, 74);
+            this.BrowserTabs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BrowserTabs.Name = "BrowserTabs";
+            this.BrowserTabs.SelectedIndex = 0;
+            this.BrowserTabs.Size = new System.Drawing.Size(1786, 838);
+            this.BrowserTabs.TabIndex = 3;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Size = new System.Drawing.Size(1778, 805);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Size = new System.Drawing.Size(1778, 802);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Browser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1191, 593);
+            this.ClientSize = new System.Drawing.Size(1786, 912);
             this.Controls.Add(this.BrowserTabs);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Browser";
             this.Text = "Elchin\'s browser";
             this.toolStrip1.ResumeLayout(false);
