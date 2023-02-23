@@ -40,7 +40,6 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
 
         private void Go_Click(object sender, EventArgs e)
         {
-            //Browser.Load(Address.Text);
         }
 
         private void addBrowserTab_Click(object sender, EventArgs e)
@@ -79,7 +78,12 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
             catch (Exception)
             {
                 
-            }            
+            }     
+
+        }
+        private void AleksejMethod()
+        {
+            //methode
         }
         private void RegnarsMethod()
         {
