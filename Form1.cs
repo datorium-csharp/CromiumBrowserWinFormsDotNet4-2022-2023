@@ -81,5 +81,12 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
                 
             }            
         }
+
+        private void BezgaliibnieksMethod()
+        {
+            //some actions here
+        }
+
     }
+
 }
