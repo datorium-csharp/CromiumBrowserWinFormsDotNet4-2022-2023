@@ -72,7 +72,9 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
             tabPage.Controls.Add(chromiumBrowser);
             chromiumBrowser.Dock = DockStyle.Fill;
 
-            BrowserTabs.TabPages.Add(tabPage);
+            var position = BrowserTabs.TabCount - 1;
+            BrowserTabs.TabPages.Insert(position, tabPage);
+            BrowserTabs.SelectedTab = tabPage;
         }
 
         private void removeBrowserTab_Click(object sender, EventArgs e)
