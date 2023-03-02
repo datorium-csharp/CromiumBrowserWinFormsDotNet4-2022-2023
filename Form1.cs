@@ -18,6 +18,8 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
         ChromiumWebBrowser chromiumBrowser = null;
         List<ChromiumWebBrowser> chromiumBrowsers = new List<ChromiumWebBrowser>();
 
+        TabPage plusPage = null;
+
         public Browser()
         {
             InitializeComponent();
@@ -30,17 +32,27 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
             Cef.Initialize(settings);
 
             chromiumBrowser = new ChromiumWebBrowser("https://google.com");
-            BrowserTabs.TabPages[0].Controls.Add(chromiumBrowser);            
+            BrowserTabs.TabPages[0].Controls.Add(chromiumBrowser);
             chromiumBrowser.Dock = DockStyle.Fill;
 
-            chromiumBrowser = new ChromiumWebBrowser("https://google.com");
-            BrowserTabs.TabPages[1].Controls.Add(chromiumBrowser);
+            plusPage = new TabPage();
+            plusPage.Text = "+";
+            BrowserTabs.TabPages[1] = plusPage;
+            BrowserTabs.MouseClick += AddTab;
+
+
             chromiumBrowser.Dock = DockStyle.Fill;
         }
+
 
         private void Go_Click(object sender, EventArgs e)
         {
             //Browser.Load(Address.Text);
+        }
+        private void AddTab(object sender, EventArgs e)
+        {
+            if (BrowserTabs.SelectedIndex == BrowserTabs.TabCount - 1)
+                AddBrowserTab();
         }
 
         private void addBrowserTab_Click(object sender, EventArgs e)
@@ -57,7 +69,8 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
             tabPage.Controls.Add(chromiumBrowser);
             chromiumBrowser.Dock = DockStyle.Fill;
 
-            BrowserTabs.TabPages.Add(tabPage);
+            BrowserTabs.TabPages.Insert(BrowserTabs.TabCount - 1, tabPage);
+            BrowserTabs.SelectedIndex = BrowserTabs.TabCount - 2;
         }
 
         private void removeBrowserTab_Click(object sender, EventArgs e)
@@ -73,13 +86,13 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
                     BrowserTabs.TabPages.Remove(BrowserTabs.SelectedTab);
                     AddBrowserTab();
                 }
-                
-                    
+
+
             }
             catch (Exception)
             {
-                
-            }            
+
+            }
         }
         private void RegnarsMethod()
         {
