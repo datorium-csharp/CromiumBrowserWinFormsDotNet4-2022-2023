@@ -15,8 +15,9 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
 {
     public partial class Browser : Form
     {
-        ChromiumWebBrowser chromiumBrowser = null;
-        List<ChromiumWebBrowser> chromiumBrowsers = new List<ChromiumWebBrowser>();
+        private ChromiumWebBrowser chromiumBrowser = null;
+        private List<ChromiumWebBrowser> chromiumBrowsers = new List<ChromiumWebBrowser>();
+        private TabPage plusPage = null;
 
         public Browser()
         {
@@ -33,9 +34,23 @@ namespace CromiumBrowserWinFormsDotNet4_2022_2023
             BrowserTabs.TabPages[0].Controls.Add(chromiumBrowser);            
             chromiumBrowser.Dock = DockStyle.Fill;
 
-            chromiumBrowser = new ChromiumWebBrowser("https://google.com");
-            BrowserTabs.TabPages[1].Controls.Add(chromiumBrowser);
-            chromiumBrowser.Dock = DockStyle.Fill;
+            //chromiumBrowser = new ChromiumWebBrowser("https://google.com");
+            //BrowserTabs.TabPages[1].Controls.Add(chromiumBrowser);
+            //chromiumBrowser.Dock = DockStyle.Fill;
+            BrowserTabs.Click += BrowserTabs_Click;
+
+            plusPage = BrowserTabs.TabPages[1];
+            plusPage.Text = "+";
+            
+        }
+
+        private void BrowserTabs_Click(object sender, EventArgs e)
+        {
+            if(BrowserTabs.SelectedTab == plusPage)
+            {
+                AddBrowserTab();
+            }
+            
         }
 
         private void Go_Click(object sender, EventArgs e)
